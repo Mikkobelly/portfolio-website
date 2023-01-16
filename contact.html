@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miki Akuta Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Nomalize CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="page-header">
+            <img src="img/mikkobelly-design-logo.jpg" class="page-header__item navigation-logo"
+                alt="navigation logo mikkobelly-design">
+            <nav class="main-navigation page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem"
+                            class="navigation-list__item navigation-list__item--active">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="contact-main">
+            <h1 class="contact__heading">Contact</h1>
+
+            <section class="info-section">
+                <p>Birmingham</p>
+                <p>United Kingdom</p>
+                <p>Tel: <a href="tel:+447710983126" class="link">+447710983126</a></p>
+                <p>Email: <a href="mailto:mikiakuta0529@gmail.com" class="link">mikiakuta0529@gmail.com</a></p>
+                <a href="mailto:mikiakuta0529@gmail.com" class="btn-secondary contact__btn">Contact me</a>
+            </section>
+
+            <form class="contact__form" action="#" method="post">
+                <h2 class="form__title">Get in Touch</h2>
+                <label for="name" class="form__label">Name: </label>
+                <input type="text" id="name" name="name" class="form__input" required>
+
+                <label for="email" class="form__label">Email: </label>
+                <input type="email" id="email" name="email" class="form__input" required>
+
+                <label for="tel" class="form__label">Tel: </label>
+                <input type="tel" id="tel" name="tel" class="form__input">
+
+                <label for="message" class="form__label">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="3" maxlength="100" class="form__textarea"
+                    required></textarea>
+
+                <button type="submit" class="btn-primary form__btn">Submit</button>
+            </form>
+        </main>
+
+        <footer class="page-footer page-footer--home">
+            <p class="footer__text">Find me on</p>
+            <div class="footer__media-box">
+                <a href="https://github.com/Mikkobelly" target="_blank">
+                    <img src="img/github.svg" alt="Github" class="footer__media">
+                </a>
+                <a href="https://twitter.com/mikkobelly" target="_blank"><img src="img/twitter.svg" alt="Twitter"
+                        class="footer__media"></a>
+                <a href="https://www.linkedin.com/in/miki-akuta-a618b2248/" target="_blank"><img src="img/linkedin.svg"
+                        alt="LinkedIn" class="footer__media"></a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
