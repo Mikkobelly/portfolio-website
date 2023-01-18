@@ -225,6 +225,7 @@ a:visited {
 
 .navigation-logo {
     width: 10rem;
+    height: auto;
 }
 
 .navigation-list__items {
@@ -279,6 +280,7 @@ a:visited {
 .dropdown__menu,
 .dropdown__close {
     width: 100%;
+    height: auto;
 }
 
 .dropdown__menu {
@@ -333,6 +335,8 @@ a:visited {
 }
 
 .footer__media {
+    width: auto;
+    height: auto;
     transition: var(--transition);
 }
 
