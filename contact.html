@@ -32,13 +32,14 @@
 
             <nav class="main-navigation page-header__item">
                 <ul role="menubar" class="navigation-list">
-                    <div class="dropdown__close-box">
+                    <div class="dropdown__close-box visible">
                         <img src="img/icon-close-menu.svg" alt="close icon" class="dropdown__close">
                     </div>
 
                     <div class="navigation-list__items">
                         <li role="presentation">
-                            <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                            <a href="index.html" role="menuitem"
+                                class="navigation-list__item navigation-list__item">Home</a>
                         </li>
                         <li role="presentation">
                             <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
@@ -70,21 +71,28 @@
                 <a href="mailto:mikiakuta0529@gmail.com" class="btn-secondary contact__btn">Contact me</a>
             </section>
 
-            <form class="contact__form" action="#" method="post">
+            <form class="contact__form" action="#" method="post" novalidate>
                 <h2 class="form__title">Get in Touch</h2>
-                <label for="name" class="form__label">Name: </label>
-                <input type="text" id="name" name="name" class="form__input" required>
 
-                <label for="email" class="form__label">Email: </label>
-                <input type="email" id="email" name="email" class="form__input" placeholder="email@examples.com"
-                    required>
+                <div class="input--name-box">
+                    <label for="name" class="form__label">Name: </label>
+                    <input type="text" id="name" name="name" class="form__input" required>
+                </div>
 
-                <label for="tel" class="form__label">Tel: </label>
-                <input type="tel" id="tel" name="tel" class="form__input">
+                <div class="input--email-box">
+                    <label for="email" class="form__label">Email: </label>
+                    <input type="email" id="email" name="email" class="form__input" placeholder="email@examples.com"
+                        required>
+                </div>
+
+                <div class="input--tel-box">
+                    <label for="tel" class="form__label">Tel: </label>
+                    <input type="tel" id="tel" name="tel" class="form__input">
+                </div>
 
                 <label for="message" class="form__label">Message:</label>
-                <textarea name="message" id="message" cols="30" rows="3" maxlength="100" class="form__textarea"
-                    required></textarea>
+                <textarea name="message" id="message" cols="30" rows="3" maxlength="100"
+                    class="form__textarea"></textarea>
 
                 <button type="submit" class="btn-primary form__btn">Submit</button>
             </form>
