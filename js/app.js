@@ -96,11 +96,11 @@
     };
 
 
-    nameInput.addEventListener('input', validateNameInput);
-    emailInput.addEventListener('input', validateEmailInput);
-    telInput.addEventListener('input', validateTelInput);
+    nameInput && nameInput.addEventListener('input', validateNameInput);
+    emailInput && emailInput.addEventListener('input', validateEmailInput);
+    telInput && telInput.addEventListener('input', validateTelInput);
 
-    form.addEventListener('submit', (e) => {
+    form && form.addEventListener('submit', (e) => {
         e.preventDefault();
         if (validateForm()) {
             alert('Form submitted!');

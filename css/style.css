@@ -886,7 +886,17 @@ td {
     .navigation-list li:last-child {
         display: block;
         text-align: end;
-        margin: 5rem 2.5rem;
+        margin: 1.5rem 2.5rem;
+    }
+
+    .navigation-list__item {
+        width: 0;
+        display: block;
+        transition: all .5s ease-in-out;
+    }
+
+    .navigation-list.visible .navigation-list__item {
+        width: 100%;
     }
 
     .dropdown__menu-box {
