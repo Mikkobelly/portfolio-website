@@ -23,19 +23,22 @@
     <!-- Nomalize CSS -->
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="flex-container">
         <header class="page-header">
             <img src="img/mikkobelly-design-logo.jpg" class="page-header__item navigation-logo"
                 alt="navigation logo mikkobelly-design">
 
             <nav class="main-navigation page-header__item">
                 <ul role="menubar" class="navigation-list">
-                    <div class="dropdown__close-box visible">
+                    <div class="dropdown__close-box isVisible">
                         <img src="img/icon-close-menu.svg" alt="close icon" class="dropdown__close">
                     </div>
 
@@ -66,9 +69,208 @@
         <main class="work-main">
             <h1 class="work__heading">Work</h1>
             <div class="projects-grid">
+                <!-- Meet App -->
+                <div class="grid__item">
+                    <h3 class="project__title">Meet App</h3>
+                    <div class="project__image-box" data-bs-toggle="modal" data-bs-target="#meetModal">
+                        <picture>
+                            <source srcset="img/meet-mobile.png" media="(max-width: 31.25em)">
+                            <img src="img/meet-desk.png" class="project__image" alt="Meet App image">
+                        </picture>
+                    </div>
+                    <p class="project__description">
+                        Meet App allows users to search for a city and get a list of events hosted in that city (or
+                        events in all cities). One chart shows how many events will take place in that city and another
+                        visualizes the popularity of event genres in the form of a pie chart.
+                    </p>
+                    <button type="button" class="project__btn" data-bs-toggle="modal" data-bs-target="#meetModal">
+                        See details
+                    </button>
+                </div>
+
+                <!-- Modal for Meet App-->
+                <div class="modal fade" id="meetModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal__title">Meet App</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal__image-box">
+                                <picture>
+                                    <source srcset="img/meet-mobile.png" media="(max-width: 31.25em)">
+                                    <img src="img/meet-desk.png" class="modal__image" alt="Meet App image">
+                                </picture>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Meet App is a progressive web application built with React using test-driven
+                                    development (TDD) technique.
+                                    The app works offline and it can be installed on both mobile devices and computers.
+                                    Serverless functions are used(AWS Lambda) for the authorization server which
+                                    generates authorization token(OAuth2 token) needed in order to access the Google
+                                    Calendar API and
+                                    get events data. Scatter chart and pie chart are implemented to visualize data using
+                                    the recharts library.
+                                </p>
+                                <hr>
+                                <h4 class="modal__techs">Technologies: </h4>
+                                <p>React, Recharts, AWS Lamda, serverless, Jest, cucmber-jest, Puppeteer, Atatus etc.
+                                </p>
+                                <div class="modal__links">
+                                    <div>
+                                        <a href="https://mikkobelly.github.io/meet/" class="project__btn modal__btn"
+                                            target="_blank">Go to site</a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/Mikkobelly/meet" target="_blank">
+                                            <img src="img/github.svg" alt="Github" class="footer__media">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- myFlix -->
+                <div class="grid__item">
+                    <h3 class="project__title">myFlix</h3>
+                    <div class="project__image-box" data-bs-toggle="modal" data-bs-target="#myFlixModal">
+                        <picture>
+                            <source srcset="img/myflix-mobile.png" media="(max-width: 31.25em)">
+                            <img src="img/myflix-desk.png" class="project__image" alt="myFlix image">
+                        </picture>
+                    </div>
+                    <p class="project__description">
+                        myFlix provides users access to information about different
+                        movies, directors, and genres. Users will be able to sign up, update their
+                        personal information, and create a list of their favorite movies.
+                    </p>
+                    <button type="button" class="project__btn" data-bs-toggle="modal" data-bs-target="#myFlixModal">
+                        See details
+                    </button>
+                </div>
+
+                <!-- Modal for myFlix-->
+                <div class="modal fade" id="myFlixModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal__title">myFlix</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal__image-box">
+                                <picture>
+                                    <source srcset="img/myflix-mobile.png" media="(max-width: 31.25em)">
+                                    <img src="img/myflix-desk.png" class="modal__image" alt="myFlix app image">
+                                </picture>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    myFlix is a SPA and it's built using full-stack JavaScript technologies MERN.
+                                    For the backend, I implemented my own REST API alongside basic HTTP authentication
+                                    for the initial login requests and JWT authentication for future requests to myFlix
+                                    API using Passport.
+                                    For the frontend, I incorporated client-side routing using React Router.
+                                </p>
+                                <hr>
+                                <h4 class="modal__techs">Technologies: </h4>
+                                <p>Node.js, Express, MongoDB, React, React Bootstrap etc.</p>
+                                <div class="modal__links">
+                                    <div>
+                                        <a href="https://myflix-by-mikkobelly.netlify.app/"
+                                            class="project__btn modal__btn" target="_blank">Go to site</a>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <small>clint-side:</small>
+                                            <a href="https://github.com/Mikkobelly/myFlix-client" target="_blank">
+                                                <img src="img/github.svg" alt="Github" class="footer__media">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <small>myFlix API:</small>
+                                            <a href="https://github.com/Mikkobelly/myFlix" target="_blank">
+                                                <img src="img/github.svg" alt="Github" class="footer__media">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pokemon List -->
+                <div class="grid__item">
+                    <h3 class="project__title">Pokemon List App</h3>
+                    <div class="project__image-box" data-bs-toggle="modal" data-bs-target="#pokemonListModal">
+                        <picture>
+                            <source srcset="img/pokemonlist-mobile.png" media="(max-width: 31.25em)">
+                            <img src="img/pokemonlist-desk.png" class="project__image" alt="Pokemon List App image">
+                        </picture>
+                    </div>
+                    <p class="project__description">
+                        Pokemon List App displays the list of pokemon names and its details(image, height, types
+                        etc.) upon selection!
+                    </p>
+                    <button type="button" class="project__btn" data-bs-toggle="modal"
+                        data-bs-target="#pokemonListModal">
+                        See details
+                    </button>
+                </div>
+
+                <!-- Modal for PokemonList-->
+                <div class="modal fade" id="pokemonListModal" tabindex="-1" aria-labelledby="modalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal__title">Pokemon List</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal__image-box">
+                                <picture>
+                                    <source srcset="img/pokemonlist-mobile.png" media="(max-width: 31.25em)">
+                                    <img src="img/pokemonlist-desk.png" class="modal__image"
+                                        alt="Pokemon List App image">
+                                </picture>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This application calls pokeAPI and displays pokemon names in a list and upon
+                                    selection will display
+                                    the pokemon's details in a modal. Additionally user can search specific pokemons by
+                                    name and
+                                    display only matched ones.
+                                </p>
+                                <hr>
+                                <h4 class="modal__techs">Technologies: </h4>
+                                <p>HTML, CSS, Bootstrap, JavaScript, jQuery</p>
+                                <div class="modal__links">
+                                    <div>
+                                        <a href="https://mikkobelly.github.io/js-app/" class="project__btn modal__btn"
+                                            target="_blank">Go to site</a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/Mikkobelly/js-app" target="_blank">
+                                            <img src="img/github.svg" alt="Github" class="footer__media">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YelpCamp -->
                 <div class="grid__item">
                     <h3 class="project__title">Yelp Camp</h3>
-                    <div class="project__image-box">
+                    <div class="project__image-box" data-bs-toggle="modal" data-bs-target="#yelpCampModal">
                         <picture>
                             <source srcset="img/yelp-camp-mobile.png" media="(max-width: 31.25em)">
                             <img src="img/yelp-camp-desk.png" class="project__image" alt="yelpcamp app image">
@@ -78,27 +280,114 @@
                         A full-stack application using Express, MongoDB, EJS and Passport
                         authentication etc. Register campgrounds and leave reviews!
                     </p>
-                    <a href="https://yelpcamp2022.onrender.com/campgrounds" class="btn-secondary project__btn"
-                        target="_blank">See project</a>
+                    <button type="button" class="project__btn" data-bs-toggle="modal" data-bs-target="#yelpCampModal">
+                        See details
+                    </button>
                 </div>
 
+                <!-- Modal for YelpCamp-->
+                <div class="modal fade" id="yelpCampModal" tabindex="-1" aria-labelledby="modalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal__title">Yelp Camp</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal__image-box">
+                                <picture>
+                                    <source srcset="img/yelp-camp-mobile.png" media="(max-width: 31.25em)">
+                                    <img src="img/yelp-camp-desk.png" class="modal__image" alt="yelpcamp app image">
+                                </picture>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    YelpCamp is a full-stack application which displays list of campgrounds, a map with
+                                    listed data and reviews for each campgrounds.
+                                    The app allows registered user to add campgrounds to the list, updates its
+                                    information and leave reviews.
+                                </p>
+                                <hr>
+                                <h4 class="modal__techs">Technologies: </h4>
+                                <p>Node.js, Express, EJS, MongoDB, Mongoose, Passport etc.</p>
+                                <div class="modal__links">
+                                    <div>
+                                        <a href="https://yelpcamp2022.onrender.com/" class="project__btn modal__btn"
+                                            target="_blank">Go to site</a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/Mikkobelly/YelpCamp" target="_blank">
+                                            <img src="img/github.svg" alt="Github" class="footer__media">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- To Do List -->
                 <div class="grid__item">
                     <h3 class="project__title">To Do List</h3>
-                    <div class="project__image-box">
+                    <div class="project__image-box" data-bs-toggle="modal" data-bs-target="#toDoListModal">
                         <picture>
                             <source srcset="img/todo-list-mobile.png" media="(max-width: 31.25em)">
                             <img src="img/todo-list-desk.png" class="project__image" alt="todo list app image">
                         </picture>
                     </div>
                     <p class="project__description">
-                        A full-stack mini application using Express, MongoDB, Mongoose and EJS
+                        A full-stack application using Express, MongoDB, Mongoose and EJS
                         etc. You can create your own custom list by adding the list name in URL!
                     </p>
-                    <a href="https://todolistnode.onrender.com/" class="btn-secondary project__btn" target="_blank">See
-                        project</a>
+                    <button type="button" class="project__btn" data-bs-toggle="modal" data-bs-target="#toDoListModal">
+                        See details
+                    </button>
                 </div>
 
-                <div class="grid__item">
+                <!-- Modal for To Do List-->
+                <div class="modal fade" id="toDoListModal" tabindex="-1" aria-labelledby="modalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal__title">To Do List</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal__image-box">
+                                <picture>
+                                    <source srcset="img/todo-list-mobile.png" media="(max-width: 31.25em)">
+                                    <img src="img/todo-list-desk.png" class="modal__image" alt="To Do List app image">
+                                </picture>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    To Do List is a full-stack application which allows users to manage to-dos.
+                                    Users can add/delete items and it's easy to use. Additionally users can create
+                                    custom list by typing the list name
+                                    in the URL after domain name followed by /.
+                                </p>
+                                <hr>
+                                <h4 class="modal__techs">Technologies: </h4>
+                                <p>Node.js, Express, EJS, MongoDB, Mongoose etc.</p>
+                                <div class="modal__links">
+                                    <div>
+                                        <a href="https://todolistnode.onrender.com/" class="project__btn modal__btn"
+                                            target="_blank">Go to site</a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/Mikkobelly/ToDoList" target="_blank">
+                                            <img src="img/github.svg" alt="Github" class="footer__media">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="grid__item">
                     <h3 class="project__title">Whac-A-Mole-Game</h3>
                     <div class="project__image-box">
                         <picture>
@@ -110,7 +399,7 @@
                         This is a game for both mobile and computers using HTML, CSS and
                         JavaScript. Chase and hit the mole to get high scores!
                     </p>
-                    <a href="https://mikkobelly.github.io/Whac-a-mole-Game/" class="btn-secondary project__btn"
+                    <a href="https://mikkobelly.github.io/Whac-a-mole-Game/" class="button-secondary project__btn"
                         target="_blank">See project</a>
                 </div>
 
@@ -126,15 +415,15 @@
                         A game for both mobile and computers using HTML, CSS and JavaScript.
                         Why don't you test your memory? Flip and get matched animals!
                     </p>
-                    <a href="https://mikkobelly.github.io/Memory-Game/" class="btn-secondary project__btn"
+                    <a href="https://mikkobelly.github.io/Memory-Game/" class="button-secondary project__btn"
                         target="_blank">See project</a>
-                </div>
+                </div> -->
 
             </div>
 
             <p class="explore__text">
                 You can explore more of my project code
-                <a href="https://github.com/Mikkobelly" target="_blank" class="explore__link btn-secondary">here</a>
+                <a href="https://github.com/Mikkobelly" target="_blank" class="explore__link button-secondary">here</a>
             </p>
         </main>
 
@@ -154,6 +443,10 @@
 
 
     <!-- <script src="js/tota11y.min.js"></script> -->
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
 

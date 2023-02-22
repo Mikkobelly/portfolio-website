@@ -3,20 +3,15 @@
     const menuIcon = document.querySelector('.dropdown__menu');
     const closeIcon = document.querySelector('.dropdown__close');
     const menuIconBox = document.querySelector('.dropdown__menu-box');
-    const closeIconBox = document.querySelector('.dropdown__close-box');
-
     const navList = document.querySelector('.navigation-list');
-    const navItems = document.querySelector('.navigation-list__items');
-
 
     menuIcon.addEventListener('click', () => {
-        navList.classList.add('visible');
+        navList.classList.add('isVisible');
         menuIconBox.classList.add('hidden');
     })
 
-
     closeIcon.addEventListener('click', () => {
-        navList.classList.remove('visible');
+        navList.classList.remove('isVisible');
         menuIconBox.classList.remove('hidden');
     })
 })();
@@ -100,6 +95,7 @@
     emailInput && emailInput.addEventListener('input', validateEmailInput);
     telInput && telInput.addEventListener('input', validateTelInput);
 
+
     form && form.addEventListener('submit', (e) => {
         e.preventDefault();
         if (validateForm()) {
@@ -108,5 +104,4 @@
             alert('Please make adjustment to fullfill requirments')
         }
     });
-
 })();
